@@ -7,26 +7,27 @@ class ListNode:
 class AddTwoNumbers:
     @staticmethod
     def add_two_numbers(l1, l2, c=0):
+        # Linkded list with the result
         result = 0
 
         # Iterates each list from left to right at the same time
         while l1 is not None and l2 is not None:
             # Add the values
-            sum = c + l1.val + l2.val
+            valid_sum = c + l1.val + l2.val
 
-            if len(str(sum)) > 1:
+            if len(str(valid_sum)) > 1:
                 # If sum is greater than 9 establishes value of c
                 # and adds only first number
-                c = int(str(sum)[0])
-                sum = int(str(sum)[1::])
+                c = int(str(valid_sum)[0])
+                valid_sum = int(str(valid_sum)[1::])
 
-            if result == 0:
+            if result is 0:
                 # First result, creates first node
-                temp_result = ListNode(sum)
+                temp_result = ListNode(valid_sum)
                 result = temp_result
             else:
                 # Inserts new nodes in previous result
-                temp_result.next = ListNode(sum)
+                temp_result.next = ListNode(valid_sum)
                 temp_result = temp_result.next
 
             # Next nodes
