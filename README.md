@@ -1,2 +1,2 @@
 # 👨‍💻Daily Interview Pro
-My solutions for the [Daily Interview Pro](dailyinterviewpro.com)
+My solutions for the [Daily Interview Pro](http://dailyinterviewpro.com)
